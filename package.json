@@ -1,0 +1,33 @@
+{
+  "name": "wordle-words",
+  "version": "1.0.0",
+  "description": "Help for Wordle",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crackmac/wordle-words.git"
+  },
+  "keywords": [
+    "wordle",
+    "puzzle"
+  ],
+  "author": "Kevin Duane",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/crackmac/wordle-words/issues"
+  },
+  "homepage": "https://github.com/crackmac/wordle-words#readme",
+  "engines": {
+    "node": "17.3.1"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "express": "^4.17.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
