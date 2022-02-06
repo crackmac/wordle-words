@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #444;
+  background: linear-gradient(to top left, #28b487, #7dd56f);
+  height: 100vh;
+  padding: 2rem;
+}
+
+.welcome {
+  font-size: 1.9rem;
+  font-weight: 500;
+}
+
+.app {
+  position: relative;
+  max-width: 100rem;
+  margin: 4rem auto;
+  display: grid;
+  /* grid-template-columns: 4fr 3fr;
+  grid-template-rows: auto repeat(3, 15rem) auto;
+  gap: 2rem; */
+
+  /* NOTE This creates the fade in/out anumation */
+  /* opacity: 0; */
+  transition: all 1s;
+}
+
+.starter_results1 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: -0.2rem;
+}
+
+.starter_results2 {
+  font-size: 2.2rem;
+  font-weight: 500;
+  margin-bottom: -0.2rem;
+}

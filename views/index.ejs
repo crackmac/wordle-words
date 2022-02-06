@@ -3,11 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="shortcut icon" type="image/png" href="img/icon.png" />
     <title>Wordle-Words</title>
-    <link rel="stylesheet" href="css/main.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <!-- <img src="img/maya_moon.jpeg" alt="cat" /> -->
-    <h1><%= text %></h1>
+    <p class="welcome"><%= text %></p>
+    <main class="app">
+      <div class="starters">
+        <p><button class="startWord">Starting Words</button></p>
+        <div class="starter_results1"></div>
+        <div class="starter_results2"></div>
+      </div>
+    </main>
+
+    <script type="module" src="js/script.js"></script>
   </body>
 </html>

@@ -5,6 +5,7 @@
   "main": "app.js",
   "scripts": {
     "dev": "nodemon app.js",
+    "local": "heroku local web -p8000",
     "start": "node app.js"
   },
   "repository": {
@@ -22,12 +23,14 @@
   },
   "homepage": "https://github.com/crackmac/wordle-words#readme",
   "engines": {
-    "node": "17.3.1"
+    "node": "17.3.1",
+    "npm": "8.3.0"
   },
   "dependencies": {
     "dotenv": "^16.0.0",
     "ejs": "^3.1.6",
-    "express": "^4.17.2"
+    "express": "^4.17.2",
+    "fs": "^0.0.1-security"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
