@@ -18,8 +18,9 @@ body {
 }
 
 .welcome {
-  font-size: 3rem;
+  font-size: 5rem;
   font-weight: 500;
+  color: gold;
 }
 
 .app {
@@ -54,6 +55,7 @@ body {
 }
 
 .starter_results1 {
+  padding-top: 1rem;
   font-size: 1.6rem;
   font-weight: 100;
   margin-bottom: -0.2rem;
