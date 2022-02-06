@@ -10,7 +10,7 @@ html {
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   color: #444;
   background: linear-gradient(to top left, #28b487, #7dd56f);
   height: 100vh;
@@ -18,7 +18,7 @@ body {
 }
 
 .welcome {
-  font-size: 1.9rem;
+  font-size: 3rem;
   font-weight: 500;
 }
 
@@ -36,9 +36,26 @@ body {
   transition: all 1s;
 }
 
+.starter_btn {
+  border: none;
+  border-radius: 8px;
+  font-size: 1.8rem;
+  /* color: white; */
+  padding: 15px 32px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.starter_btn:hover,
+.starter_btn:focus {
+  outline: none;
+  color: #777;
+}
+
 .starter_results1 {
-  font-size: 1.2rem;
-  font-weight: 500;
+  font-size: 1.6rem;
+  font-weight: 100;
   margin-bottom: -0.2rem;
 }
 

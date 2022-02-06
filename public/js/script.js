@@ -1,16 +1,16 @@
-"strict mode";
+'strict mode';
 
-import { wordList } from "./wordlist.js";
-const wordlist = wordList.toString().split(",");
-const bestLetters = ["a", "e", "i", "o", "s", "t", "n"];
+import { wordList } from './wordlist.js';
+const wordlist = wordList.toString().split(',');
+const bestLetters = ['a', 'e', 'i', 'o', 's', 't', 'n'];
 
-let startBtn = document.querySelector(".startWord");
-let starterResults1 = document.querySelector(".starter_results1");
-let starterResults2 = document.querySelector(".starter_results2");
+let starter_btn = document.querySelector('.starter_btn');
+let starterResults1 = document.querySelector('.starter_results1');
+let starterResults2 = document.querySelector('.starter_results2');
 
-startBtn.addEventListener("click", () => {
-  starterResults1.textContent = "";
-  starterResults2.textContent = "";
+starter_btn.addEventListener('click', () => {
+  starterResults1.textContent = '';
+  starterResults2.textContent = '';
   // add starting words text to screen
   const sliceBestLetters = randomizeArray(bestLetters).slice(3);
   const mixedWords = randomizeArray(wordsWithLetters(sliceBestLetters));
@@ -35,7 +35,7 @@ function randomizeArray(arr) {
 function wordsWithLetters(letters) {
   let words = [];
 
-  wordlist.filter((w) => {
+  wordlist.filter(w => {
     let count = letters.length;
     for (let i = 0; i < letters.length; i++) {
       const letter = letters[i];
