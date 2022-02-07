@@ -37,8 +37,24 @@ body {
   transition: all 1s;
 }
 
-.starter_btn {
+.starters,
+.find_words {
+  margin-top: 1rem;
+  width: 75%;
+  border-radius: 1rem;
+  padding: 3rem 4rem;
+  color: #333;
+  background-image: linear-gradient(to top left, #ffb003, #ffcb03);
+}
+
+.find_words {
+  display: none;
+}
+
+.starter_btn,
+.find_words_btn {
   border: none;
+  width: 200px;
   border-radius: 8px;
   font-size: 1.8rem;
   /* color: white; */
@@ -49,20 +65,38 @@ body {
 }
 
 .starter_btn:hover,
-.starter_btn:focus {
+.starter_btn:focus,
+.find_words_btn:hover,
+.find_words_btn:focus {
   outline: none;
   color: #777;
 }
 
-.starter_results1 {
-  padding-top: 1rem;
+.starter_results1,
+.find_words_results1 {
+  padding-top: 2rem;
   font-size: 1.6rem;
   font-weight: 100;
   margin-bottom: -0.2rem;
 }
 
-.starter_results2 {
+.starter_results2,
+.find_words_results2 {
+  padding-top: 1rem;
+  padding-bottom: 2rem;
   font-size: 2.2rem;
   font-weight: 500;
   margin-bottom: -0.2rem;
+}
+
+.form_find_words_input1,
+.form_find_words_input2,
+.form_find_words_input3,
+.form_find_words_input4,
+.form_find_words_input5 {
+  width: 4rem;
+  height: 4rem;
+  margin-right: 1rem;
+  font-size: 1.8rem;
+  padding: 1rem;
 }

@@ -14,12 +14,26 @@
   </head>
   <body>
     <!-- <img src="img/maya_moon.jpeg" alt="cat" /> -->
-    <p class="welcome"><%= text %></p>
+
     <main class="app">
+      <p class="welcome"><%= text %></p>
       <div class="starters">
         <p><button class="starter_btn">Starting Words</button></p>
         <div class="starter_results1"></div>
         <div class="starter_results2"></div>
+      </div>
+      <div class="find_words">
+        <form class="form form_find_words">
+          <input type="text" class="form_find_words_input1" />
+          <input type="text" class="form_find_words_input2" />
+          <input type="text" class="form_find_words_input3" />
+          <input type="text" class="form_find_words_input4" />
+          <input type="text" class="form_find_words_input5" />
+          <button class="find_words_btn">Find Words</button>
+        </form>
+
+        <div class="find_words_results1"></div>
+        <div class="find_words_results2"></div>
       </div>
     </main>
 

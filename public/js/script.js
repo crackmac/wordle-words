@@ -4,14 +4,23 @@ import { wordList } from './wordlist.js';
 const wordlist = wordList.toString().split(',');
 const bestLetters = ['a', 'e', 'i', 'o', 's', 't', 'n'];
 
-let starter_btn = document.querySelector('.starter_btn');
-let starterResults1 = document.querySelector('.starter_results1');
-let starterResults2 = document.querySelector('.starter_results2');
+const starter_btn = document.querySelector('.starter_btn');
+const starterResults1 = document.querySelector('.starter_results1');
+const starterResults2 = document.querySelector('.starter_results2');
+const find_words_btn = document.querySelector('.find_words_btn');
+const find_wordsResults1 = document.querySelector('.find_words_results1');
+const find_wordsResults2 = document.querySelector('.find_words_results2');
+
+const find_words_input1 = document.querySelector('.form_find_words_input1');
+const find_words_input2 = document.querySelector('.form_find_words_input2');
+const find_words_input3 = document.querySelector('.form_find_words_input3');
+const find_words_input4 = document.querySelector('.form_find_words_input4');
+const find_words_input5 = document.querySelector('.form_find_words_input5');
 
 starter_btn.addEventListener('click', () => {
   starterResults1.textContent = '';
   starterResults2.textContent = '';
-  // add starting words text to screen
+  // find words from short list of popular letters
   const sliceBestLetters = randomizeArray(bestLetters).slice(3);
   const mixedWords = randomizeArray(wordsWithLetters(sliceBestLetters));
   // console.log(
@@ -22,6 +31,18 @@ starter_btn.addEventListener('click', () => {
   // );
   starterResults1.textContent = `Some words containing the most common letters ${sliceBestLetters}`;
   starterResults2.textContent += `${mixedWords.slice(0, 4)}`;
+});
+
+find_words_btn.addEventListener('click', () => {
+  find_wordsResults1.textContent = '';
+  find_wordsResults2.textContent = '';
+  // find words from supplied letters
+  const find_words_results = randomizeArray(
+    wordsWithLetters(['a', 'l', 't', 'o'])
+  );
+  console.log(`${find_words_input1}`);
+  // find_wordsResults1.textContent = `Some words containing the most common letters ${sliceBestLetters}`;
+  // find_wordsResults2.textContent += `${mixedWords.slice(0, 4)}`;
 });
 
 function randomizeArray(arr) {
@@ -48,5 +69,10 @@ function wordsWithLetters(letters) {
       }
     }
   });
+  if (words.length === 0) {
+    console.error('words.length is zero');
+    words.push('Sorry, no results. Try again.');
+  }
+  // console.log(words);
   return words;
 }
