@@ -18,7 +18,7 @@ body {
 }
 
 .welcome {
-  font-size: 5rem;
+  font-size: 10vw;
   font-weight: 500;
   color: gold;
 }
@@ -40,7 +40,6 @@ body {
 .starters,
 .find_words {
   margin-top: 1rem;
-  width: 75%;
   border-radius: 1rem;
   padding: 3rem 4rem;
   color: #333;

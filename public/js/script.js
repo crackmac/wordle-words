@@ -36,13 +36,19 @@ starter_btn.addEventListener('click', () => {
 find_words_btn.addEventListener('click', () => {
   find_wordsResults1.textContent = '';
   find_wordsResults2.textContent = '';
+  const guess = [];
+  guess[0] = find_words_input1.value;
+  guess[1] = find_words_input2.value;
+  guess[2] = find_words_input3.value;
+  guess[3] = find_words_input4.value;
+  guess[4] = find_words_input5.value;
   // find words from supplied letters
-  const find_words_results = randomizeArray(
-    wordsWithLetters(['a', 'l', 't', 'o'])
-  );
-  console.log(`${find_words_input1}`);
-  // find_wordsResults1.textContent = `Some words containing the most common letters ${sliceBestLetters}`;
-  // find_wordsResults2.textContent += `${mixedWords.slice(0, 4)}`;
+  // const find_words_results = randomizeArray(
+  //   wordsWithLetters(['a', 'l', 't', 'o'])
+  // );
+  // console.log(`${guess}`);
+  find_wordsResults1.textContent = `${guess}`;
+  find_wordsResults2.textContent = `${guess}`;
 });
 
 function randomizeArray(arr) {
@@ -73,6 +79,6 @@ function wordsWithLetters(letters) {
     console.error('words.length is zero');
     words.push('Sorry, no results. Try again.');
   }
-  // console.log(words);
+  console.log(words);
   return words;
 }
