@@ -13,26 +13,28 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <main class="app">
-      <p class="welcome"><%= text %></p>
-      <div class="starters">
-        <p><button class="starter_btn">Starting Words</button></p>
-        <div class="starter_results1"></div>
-        <div class="starter_results2"></div>
-      </div>
-      <div class="find_words">
-        <form class="form form_find_words">
-          <input type="text" class="form_find_words_input1" />
-          <input type="text" class="form_find_words_input2" />
-          <input type="text" class="form_find_words_input3" />
-          <input type="text" class="form_find_words_input4" />
-          <input type="text" class="form_find_words_input5" />
-          <button class="find_words_btn">Find Words</button>
-        </form>
-        <div class="find_words_results1"></div>
-        <div class="find_words_results2"></div>
-      </div>
-    </main>
+    <div class="welcome"><%= text %></div>
+    <div class="starters">
+      <button class="starter_btn">Starting Words</button>
+      <div class="starter_results1"></div>
+      <div class="starter_results2"></div>
+    </div>
+    <div class="find_words">
+      <p>Enter letters to search the word list.</p>
+      <p>Use a CAPITAL letter to lock the position of the letter.</p>
+      <input type="text" class="form_find_words_input1" />
+      <input type="text" class="form_find_words_input2" />
+      <input type="text" class="form_find_words_input3" />
+      <input type="text" class="form_find_words_input4" />
+      <input type="text" class="form_find_words_input5" />
+      <button class="find_words_btn" type="button">Find Words</button>
+      <div class="find_words_results1"></div>
+      <div class="find_words_results2"></div>
+    </div>
+    <footer>
+      <!-- Todo -->
+      <!-- Add Debug button and footer info -->
+    </footer>
 
     <script type="module" src="js/script.js"></script>
   </body>

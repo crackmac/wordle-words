@@ -1,57 +1,44 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit;
-}
-
-html {
-  font-size: 62.5%;
+*,
+*::after,
+*::before {
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
-  color: #444;
   background: linear-gradient(to top left, #28b487, #7dd56f);
-  height: 100vh;
-  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  padding: 1em;
+  font-size: clamp(0.5rem, 2.5vmin, 1.5rem);
+  color: #444;
 }
 
 .welcome {
-  font-size: 10vw;
-  font-weight: 500;
+  display: flex;
+  font-size: 3em;
+  font-weight: bold;
   color: gold;
-}
-
-.app {
-  position: relative;
-  max-width: 100rem;
-  margin: 4rem auto;
-  display: grid;
-  /* grid-template-columns: 4fr 3fr;
-    grid-template-rows: auto repeat(3, 15rem) auto;
-    gap: 2rem; */
-
-  /* NOTE This creates the fade in/out anumation */
-  /* opacity: 0; */
-  transition: all 1s;
+  user-select: none;
+  transition: transform 250ms linear;
 }
 
 .starters,
 .find_words {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(auto, 1.25em));
+  grid-auto-rows: 3em;
+  gap: 0.25em;
+  background-image: linear-gradient(to top left, #ffb003, #ffcb03);
+  /* justify-content: center; */
   margin-top: 1rem;
   border-radius: 1rem;
   padding: 3rem 4rem;
-  color: #333;
-  background-image: linear-gradient(to top left, #ffb003, #ffcb03);
 }
-
-.find_words p {
-  font-size: 2vw;
-  margin-bottom: 1rem;
-}
-
-/* .find_words {
+/* 
+.find_words {
   display: none;
 } */
 
