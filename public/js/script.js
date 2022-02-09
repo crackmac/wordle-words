@@ -33,49 +33,17 @@ function wordSearch(letters) {
     let count = letters.length;
     for (let i = 0; i < letters.length; i++) {
       const letter = letters[i];
-      if (w.includes(letter)) {
-        count--;
-        if (count === 0) {
-          // console.log(`Word is ${w}`);
-          words.push(w);
-        }
-      }
-    }
-  });
-  if (words.length === 0) {
-    console.error('words.length is zero');
-    words.push('Sorry, no results. Try again.');
-  }
-  // console.log(words);
-  return words;
-}
-
-function wordSearch2(letters) {
-  let words = [];
-
-  console.log(`Letters: ${letters}`);
-  console.log(`wordlist.lenght: ${wordlist.length}`);
-
-  wordlist.filter(w => {
-    // console.log(w);
-    let count = letters.length;
-    for (let i = 0; i < letters.length; i++) {
-      const letter = letters[i];
       if (letter === undefined) {
         continue;
       }
       if (letter.toUpperCase() === letter && w[i] === letter.toLowerCase()) {
-        // console.log(`We have a match! ${w[i]}, ${letter.toLowerCase()}, ${w}`);
         count--;
-        // console.log(`Count is ${count}`);
         if (count === 0) {
-          // console.log(`Word is ${w}`);
           words.push(w);
         }
       } else if (w.includes(letter)) {
         count--;
         if (count === 0) {
-          // console.log(`Word is ${w}`);
           words.push(w);
         }
       }
@@ -85,7 +53,6 @@ function wordSearch2(letters) {
     console.error('words.length is zero');
     words.push('Sorry, no results. Try again.');
   }
-  // console.log(words);
   return words;
 }
 
@@ -95,13 +62,7 @@ starter_btn.addEventListener('click', () => {
   starterResults2.textContent = '';
   // find words from short list of popular letters
   const sliceBestLetters = randomizeArray(bestLetters).slice(3);
-  const mixedWords = randomizeArray(wordSearch2(sliceBestLetters));
-  // console.log(
-  //   `Five words containing the most common letters ${sliceBestLetters}\n${mixedWords.slice(
-  //     0,
-  //     5
-  //   )}\n`
-  // );
+  const mixedWords = randomizeArray(wordSearch(sliceBestLetters));
   starterResults1.textContent = `Some words containing the most common letters ${sliceBestLetters}`;
   starterResults2.textContent += `${mixedWords.slice(0, 4)}`;
 });
@@ -117,10 +78,10 @@ find_words_btn.addEventListener('click', () => {
   guess[4] = find_words_input5.value;
   // find words from supplied letters
 
-  const mixedWords = randomizeArray(wordSearch2(guess));
+  const mixedWords = randomizeArray(wordSearch(guess));
 
-  console.log(`${guess}`);
-  console.log(`${mixedWords}`);
+  // console.log(`${guess}`);
+  // console.log(`${mixedWords}`);
   find_wordsResults1.textContent = `Some words containing your supplied letters ${guess}`;
   find_wordsResults2.textContent = `${mixedWords.slice(0, 4)}`;
   // find_wordsResults2.textContent = `${guess}`;
