@@ -1,16 +1,16 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 html {
   font-size: 62.5%;
-  box-sizing: border-box;
 }
 
 body {
   font-family: 'Poppins', sans-serif;
+  font-size: clamp(0.5rem, 2.5vmin, 2rem);
   color: #444;
   background: linear-gradient(to top left, #28b487, #7dd56f);
   height: 100vh;
@@ -47,7 +47,7 @@ body {
 }
 
 .find_words p {
-  font-size: 2vw;
+  font-size: inherit;
   margin-bottom: 1rem;
 }
 
@@ -60,7 +60,7 @@ body {
   border: none;
   width: 200px;
   border-radius: 8px;
-  font-size: 1.8rem;
+  font-size: inherit;
   /* color: white; */
   padding: 15px 32px;
   background-color: #fff;
@@ -101,6 +101,9 @@ body {
   width: 4rem;
   height: 4rem;
   margin-right: 1rem;
-  font-size: 1.8rem;
+  font-size: inherit;
   padding: 1rem;
+  border-radius: 0.25em;
+  cursor: pointer;
+  user-select: none;
 }
