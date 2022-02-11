@@ -17,9 +17,13 @@ body {
   padding: 2rem;
 }
 
-.welcome {
+.title {
   font-size: 10vw;
   font-weight: 500;
+}
+
+.title a {
+  text-decoration: none;
   color: gold;
 }
 
