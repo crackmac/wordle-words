@@ -10,7 +10,7 @@ html {
 
 body {
   font-family: 'Poppins', sans-serif;
-  font-size: clamp(0.5rem, 2.5vmin, 2rem);
+  font-size: clamp(2rem, 2.5vw, 3rem);
   color: #444;
   background: linear-gradient(to top left, #28b487, #7dd56f);
   height: 100vh;
@@ -58,11 +58,12 @@ body {
 .starter_btn,
 .find_words_btn {
   border: none;
-  width: 200px;
+  /* width: 200px; */
   border-radius: 8px;
   font-size: inherit;
   /* color: white; */
   padding: 15px 32px;
+  margin-top: 1rem;
   background-color: #fff;
   cursor: pointer;
   transition: all 0.3s;
@@ -100,9 +101,9 @@ body {
 .form_find_words_input5 {
   width: 4rem;
   height: 4rem;
-  margin-right: 1rem;
+  /* margin-right: 0.1rem; */
   font-size: inherit;
-  padding: 1rem;
+  /* padding: 1rem; */
   border-radius: 0.25em;
   cursor: pointer;
   user-select: none;
