@@ -104,6 +104,7 @@ body {
   /* margin-right: 0.1rem; */
   font-size: inherit;
   /* padding: 1rem; */
+  text-align: center;
   border-radius: 0.25em;
   cursor: pointer;
   user-select: none;
